@@ -13,18 +13,30 @@ def createAndOpen(filename, mode):
 
 def get_recs():
     with createAndOpen(DATA_RECS, 'w') as f:
-        recs = requests.get(RECS, headers=HEADERS).json()[
-            "data"]["results"]
-        json.dump(recs, f)
-    return recs
+        recs = requests.get(RECS, headers=HEADERS).json()
+        if (recs['meta']['status'] != 200):
+            if (recs['error']['message'] == 'SESSION_INVALID'):
+                print("You must update your X-AUTH-TOKEN")
+            else:
+                print(f"{recs['error']['message']} ({recs['error']['code']})")
+            exit()
+        else:
+            json.dump(recs['data']['results'], f)
+    return recs['data']['results']
 
 
 def get_teasers():
     with createAndOpen(DATA_TEASERS, 'w') as f:
-        teasers = requests.get(TEASERS, headers=HEADERS).json()[
-            "data"]["results"]
-        json.dump(teasers, f)
-    return teasers
+        teasers = requests.get(TEASERS, headers=HEADERS).json()
+        if (teasers['meta']['status'] != 200):
+            if (teasers['error']['message'] == 'SESSION_INVALID'):
+                print("You must update your X-AUTH-TOKEN")
+            else:
+                print(f"{teasers['error']['message']} ({teasers['error']['code']})")
+            exit()
+        else:
+            json.dump(teasers['data']['results'], f)
+    return teasers['data']['results']
 
 
 def get_image(url):

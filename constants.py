@@ -16,9 +16,6 @@ COUNT = f"{API}/v2/fast-match/count"
 #POST
 SUPERLIKE = lambda id: f"{API}/like/{id}/super"
 
-# To prevent spamming the API
-THROTTLE = 5000
-
 # Data files
 DATA_FOLDER = join(PROJECT, "data")
 DATA_RECS = join(DATA_FOLDER, "recs.json")

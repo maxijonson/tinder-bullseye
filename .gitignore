@@ -11,7 +11,7 @@ __pycache__
 # Refer to secret.template.py
 secret.py
 
-# Used to store temporary data so I only need to poll Tinder's API once
+# Used to store temporary data for debugging purposes. This directory is overwritten at every run.
 data
 
 # Notebook to test Python syntax (since I suk)
