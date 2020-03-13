@@ -28,7 +28,7 @@ The process is fairly simple. Note that I am not using any existing Tinder unoff
 
 1.  I fetch people who liked me on the `teasers` endpoint. This gives me access to their photos (unblurred) as well as some other information which is not really useful to me. Note that the `id` is not the actual user account id, otherwise we would already be done!
 2.  The `recs` (recommendations) endpoint gives us 20, you guessed it, recommendations. These people's `id` are their actual account `id` which we will pass to the `like` or `pass` endpoint. They also come with their pictures, which we will be using to compare with our teasers.
-3.  Compare the picture(s) from the recommendation with the picture(s) from our teasers. If they kind of match (accuracy doesn't need to be perfect), it is a good chance we got that person! We can now ask if we wish to "like" or "pass" this person and poll the `like` or `pass` endpoint accordingly.
+3.  Compare the picture(s) from the recommendation with the picture(s) from our teasers. If they kind of match (accuracy doesn't need to be perfect), it is a good chance we got that person! We can now ask if we wish to "like" or "pass" this person and poll the `like` (press 'L'), `pass` (press 'P') or `superlike` (press 'S') endpoint accordingly.
 4.  Repeat from step 2 until we found all the matches.
 
 ### Endpoints
