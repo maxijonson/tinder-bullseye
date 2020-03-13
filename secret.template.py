@@ -1,0 +1,1 @@
+X_AUTH_TOKEN = "YOUR_X_AUTH_TOKEN" # Can be grabbed from request headers

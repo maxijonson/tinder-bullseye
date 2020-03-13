@@ -1,1 +1,18 @@
+# This is the main.js file running when using the app on the web (maybe mobile too, but not sure). It is where the API endpoints are exposed.
 tinder-app.js
+
+# VS Code ❤
+.vscode
+
+# virtualenv
+venv
+__pycache__
+
+# Refer to secret.template.py
+secret.py
+
+# Used to store temporary data so I only need to poll Tinder's API once
+data
+
+# Notebook to test Python syntax (since I suk)
+Notebook
